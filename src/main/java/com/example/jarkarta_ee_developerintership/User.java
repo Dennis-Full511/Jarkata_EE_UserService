@@ -1,15 +1,25 @@
 package com.example.jarkarta_ee_developerintership;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 public class User {
     private String firstname;
     private String lastname;
     private String email;
-    private String birthday;
-    private String password;
+    private LocalDate birthday;
+    private byte[] password;
     private int id;
     public User() {
+    }
+
+    public User(String firstname, String lastname, String email, LocalDate birthday, byte[] password, int id) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.birthday = birthday;
+        this.password = password;
+        this.id = id;
     }
 
     public String getFirstname() {
@@ -36,19 +46,19 @@ public class User {
         this.email = email;
     }
 
-    public String getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(String birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 
-    public String getPassword() {
+    public byte[] getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(byte[] password) {
         this.password = password;
     }
 
